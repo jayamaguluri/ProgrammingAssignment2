@@ -1,7 +1,9 @@
-## Put comments here that give an overall description of what your
-## functions do
+## Functions for creating and using inverted matrices which caching ability
 
-## Write a short comment describing this function
+
+## Creates cacheable matrix for inputting to
+## cacheSolve() function which sets and gets 
+## the cached values
 
 makeCacheMatrix <- function(x = matrix()) {
   ## Initialize the inverse property
@@ -32,7 +34,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## Computes the inverse of the cacheable matrix returned by makeCacheMatrix()
+## If the inverse has already been calculated and there's no change in the matrix
+## then the cacheSolve() returns the cached inverse
 
 cacheSolve <- function(x, ...) {
 
